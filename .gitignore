@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# local configs (they contain personal paths)
+my-*.json
+!references/profiles/*.json
