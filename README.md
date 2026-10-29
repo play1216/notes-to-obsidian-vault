@@ -149,8 +149,10 @@ Full write-ups in [`references/pitfalls.md`](references/pitfalls.md). Short vers
 | 3 | Chapter keyword is a substring of another chapter's | Whole batch misclassified |
 | 4 | Page-level `##` sections glued to the last item | Content bleeds between items |
 | 5 | `Path(x).stem` eats dots in IDs | False broken-link reports |
-| 6 | `\|` vs `|` in wikilinks | Half the links reported broken |
+| 6 | Escaped vs bare pipe in wikilinks | Half the links reported broken |
 | 7 | Rebuild wipes hand-written pages | Irrecoverable unless stashed |
+
+> #6 in detail: inside a table cell a pipe must be escaped as `\|`, but in normal text it is bare. A link checker has to split on both forms — handle only one and you miss half of them.
 
 The general lesson: **before changing the parser, ask "if this change is wrong, will it raise an error?"** For six of the seven above, the answer was no. That is why `verify_vault.py` compares `$` counts item by item — it is the single most sensitive check for truncated bodies.
 
