@@ -19,6 +19,8 @@
 
 上面每一条都真实发生过，没有一条报错。这个 skill 就是从那次迁移里抽出来的。
 
+那次迁移（148 条数学题本 → 独立库，含后续 20 条增量）的**完整过程、决策依据、格式约束和坑的前因后果**写在 [`references/case-study-math-notes.md`](references/case-study-math-notes.md)：从「错题本」改名为「重点题本」开始，到逐张照片核对、出方案等确认、建库校验、开源、再到增量阶段的撞词和索引事故。改脚本或做增量前值得先扫一遍。
+
 所以它的重心不在解析，而在：**先探查、再跟用户确认、最后校验。**
 
 ---
@@ -133,6 +135,7 @@ Obsidian 什么都能塞，所以最容易变成一团。让四个机制各管�
 | `SKILL.md` | 五条铁律、四层分工、六步流程 |
 | `references/config-schema.md` | 全部配置字段，以及为新领域写 profile 的流程 |
 | `references/pitfalls.md` | **七个静默失败案例**，改解析逻辑前必读 |
+| `references/case-study-math-notes.md` | **完整案例复盘**：148 条数学题本从调研、出方案、建库、校验到开源与增量的全过程，含格式限制与所有坑的来龙去脉 |
 | `references/profiles/math-gaokao.json` | 已验证的数学题本配置（148 条） |
 | `assets/pages/` | 说明页模板，支持 `{{TITLE}}`、`{{ITEMS}}` 等占位符 |
 

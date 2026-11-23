@@ -19,6 +19,8 @@ Splitting it into an Obsidian vault is the obvious upgrade. The problem is that 
 
 Every one of those happened during the migration this skill was extracted from. None raised an error.
 
+The full story of that migration — 148 math problems to a standalone vault, including the later 20-item increment, the decisions behind the four-layer design, the format constraints, and every failure in context — is in [`references/case-study-math-notes.md`](references/case-study-math-notes.md) (Chinese). Read it before changing the parser or doing an incremental update.
+
 So this skill is built around a different idea: **probe first, confirm with the user, verify after.** The parsing is the easy part.
 
 ---
@@ -133,6 +135,7 @@ Obsidian lets you put anything anywhere, which is exactly why most vaults become
 | `SKILL.md` | Five hard rules, four-layer design, six-step workflow |
 | `references/config-schema.md` | Every config field, plus how to write a profile for a new domain |
 | `references/pitfalls.md` | **Seven silent-failure case studies** — read before changing any parsing logic |
+| `references/case-study-math-notes.md` | Full retrospective of the original 148-item migration: timeline, design rationale, format constraints, all failures in context, and the later incremental update (Chinese) |
 | `references/profiles/math-gaokao.json` | Verified profile for a 148-item gaokao math problem set |
 | `assets/pages/` | Overview page templates with `{{TITLE}}`, `{{ITEMS}}` placeholders |
 

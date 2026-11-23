@@ -12,6 +12,8 @@ agent_created: true
 
 难点不在搬运，在于**搬运会静默丢内容**：脚本跑完打印成功、退出码 0，但少了 2 条、分错了一章、公式被截断——全都不报错。所以这套流程的重点是**先探查、再确认、后校验**。
 
+这套流程来自一次真实迁移（148 条高考数学题本 → Obsidian 独立库，含后续增量）。**来龙去脉、当时的取舍、格式约束和全部坑的前因后果见 `references/case-study-math-notes.md`**；改解析逻辑或做增量前建议先读。
+
 ---
 
 ## 铁律
@@ -146,6 +148,7 @@ python scripts/verify_vault.py --config <cfg.json>
 |---|---|
 | `references/config-schema.md` | 全部配置字段，以及为新领域写 profile 的流程 |
 | `references/pitfalls.md` | **七个静默失败案例**，改解析逻辑前必读 |
+| `references/case-study-math-notes.md` | 真实迁移的完整复盘：时间线、四层分工的由来、格式约束、七个坑的现场、增量阶段的新问题与遗留风险 |
 | `references/profiles/math-gaokao.json` | 已验证的数学题本配置 |
 | `assets/pages/` | 说明页模板（怎么用/字段说明/可选查询/条目模板），支持 `{{TITLE}}`、`{{ITEMS}}` 等占位符 |
 
